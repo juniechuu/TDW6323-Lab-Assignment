@@ -25,9 +25,11 @@ profile_default/
 ipython_config.py
 
 # ── Generated output ───────────────────────────────────────────────────────────
-output/
-# Keep the output directory itself tracked but ignore its contents
-!output/.gitkeep
+# Ignore generated plots (large, always reproducible via run_part1.py)
+output/**/*.png
+
+# BUT track the cleaned dataset — Parts 2 & 3 of the notebook depend on it
+!output/cleaned_data.csv
 
 # ── OS files ───────────────────────────────────────────────────────────────────
 .DS_Store
